@@ -11,7 +11,7 @@ def app_path():
     if hasattr(sys, 'frozen'):
         return os.path.dirname(sys.executable)
     return os.path.dirname(__file__)
-parh = app_path()+'/supermarkt_sales.xlsx'
+path = app_path()+'/supermarkt_sales.xlsx'
 # 读取数据
 @st.cache
 def get_data_from_excel():
