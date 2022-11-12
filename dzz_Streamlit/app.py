@@ -1,7 +1,6 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-from PIL import Image
 
 # 设置网页
 st.set_page_config(page_title="数据看板demo", page_icon="🧊", layout="wide")
