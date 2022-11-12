@@ -8,7 +8,7 @@ st.set_page_config(page_title="数据看板demo", page_icon="🧊", layout="wide
 # 读取数据
 @st.cache
 def get_data_from_excel():
-    df = pd.read_excel(r"./dzz_workspace/dzz_Streamlit/supermarkt_sales.xlsx",
+    df = pd.read_excel(r"dzz_workspace\\dzz_Streamlit\\supermarkt_sales.xlsx",
         sheet_name="Sales",
         skiprows=3,
         usecols="B:R",
