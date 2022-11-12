@@ -9,7 +9,7 @@ st.set_page_config(page_title="数据看板demo", page_icon="🧊", layout="wide
 @st.cache
 def get_data_from_excel():
     df = pd.read_excel(
-        io=r"E:\project\vscode_project\data_board\supermarkt_sales.xlsx",
+        io="supermarkt_sales.xlsx",
         sheet_name="Sales",
         skiprows=3,
         usecols="B:R",
