@@ -1,14 +1,21 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+import os
+import sys
 
 # 设置网页
 st.set_page_config(page_title="数据看板demo", page_icon="🧊", layout="wide")
 
+def app_path():
+    if hasattr(sys, 'frozen'):
+        return os.path.dirname(sys.executable)
+    return os.path.dirname(__file__)
+parh = app_path()+'/supermarkt_sales.xlsx'
 # 读取数据
 @st.cache
 def get_data_from_excel():
-    df = pd.read_excel("dzz_workspace\\dzz_Streamlit\\supermarkt_sales.xlsx",
+    df = pd.read_excel(path,
         sheet_name="Sales",
         skiprows=3,
         usecols="B:R",
